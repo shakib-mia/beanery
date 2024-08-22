@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Beanery - The Art of Coffee</title>
+  </head>
+  <body>
+    <!-- <nav
+      class="container absolute left-0 right-0 top-0 mx-auto flex justify-between bg-white py-2 lg:mt-0 lg:items-center lg:bg-transparent"
+    >
+      <img
+        src="./assets/logo.jpg"
+        class="z-10 h-fit w-1/3 lg:w-1/6"
+        alt="logo"
+      />
+
+      <label for="navcheck" class="z-50 flex items-center lg:hidden">
+        <i class="fa fa-bars"></i>
+      </label>
+
+      <input type="checkbox" id="navcheck" class="hidden" />
+
+      <ul
+        class="absolute right-0 flex w-full flex-col items-end gap-10 overflow-hidden px-4 pt-20 shadow-xl lg:static lg:w-fit lg:flex-row lg:items-center lg:overflow-visible lg:px-0 lg:pt-0 lg:shadow-none"
+        id="navbar"
+      >
+        <li class="group hover:text-primary">
+          <a class="font-medium" href="#"> Discover Beanery </a>
+          <div
+            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
+          ></div>
+        </li>
+        <li class="group hover:text-primary">
+          <a class="font-medium" href="#"> Menu </a>
+          <div
+            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
+          ></div>
+        </li>
+        <li class="group hover:text-primary">
+          <a class="font-medium" href="#"> About Us </a>
+          <div
+            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
+          ></div>
+        </li>
+        <li class="group hover:text-primary">
+          <a class="font-medium" href="#"> Location </a>
+          <div
+            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
+          ></div>
+        </li>
+        <button>Book A Table</button>
+      </ul>
+    </nav> -->
+
+    <nav
+      class="container absolute left-0 right-0 top-0 mx-auto flex items-center justify-between py-6 text-primary xl:py-[2.44rem]"
+    >
+      <!-- Logo -->
+      <a href="#" class="z-[9999] inline-block font-semibold">
+        <img src="./assets/logo.png" class="z-10 w-1/2" alt="logo" />
+      </a>
+
+      <label class="z-[9999] md:hidden" for="nav-check">
+        <i class="fa fa-bars"></i>
+      </label>
+      <input type="checkbox" class="hidden" id="nav-check" />
+      <!-- Nav Links -->
+      <div
+        class="absolute left-[-21px] top-24 z-50 w-screen overflow-hidden bg-white md:static md:h-auto md:w-auto md:flex-row md:bg-transparent"
+        id="navbar"
+      >
+        <ul
+          class="container flex flex-col items-end gap-[2.69rem] lg:items-center xl:flex-row"
+        >
+          <li class="text-base">
+            <a class="underline-offset-4 hover:underline" href="#"
+              >Discover Beanery</a
+            >
+          </li>
+          <li class="text-base">
+            <a class="underline-offset-4 hover:underline" href="#">Menu</a>
+          </li>
+          <li class="text-base">
+            <a class="underline-offset-4 hover:underline" href="#">About Us</a>
+          </li>
+          <li class="text-base">
+            <a class="underline-offset-4 hover:underline" href="#">Location</a>
+          </li>
+
+          <button>Book a Table</button>
+        </ul>
+      </div>
+
+      <!-- Sign up Button -->
+      <button class="btn-white hidden">Sign up</button>
+    </nav>
+
+    <header class="container flex h-screen items-center">
+      <aside class="lg:w-[70%]">
+        <h1 class="font-bold text-primary">
+          Experience the Art of Coffee at Beanery
+        </h1>
+
+        <p class="mt-6 lg:w-3/4">
+          Indulge in our expertly crafted coffee and immerse yourself in the
+          cozy ambiance of Beanery. Discover the perfect blend of flavor and
+          atmosphere.
+        </p>
+
+        <div class="mt-10 flex gap-6">
+          <button>Explore More</button>
+          <button class="btn-outline">Explore More</button>
+        </div>
+      </aside>
+
+      <img
+        src="./assets/hero.jpg"
+        alt="hero"
+        class="absolute right-0 -z-10 w-1/2"
+      />
+    </header>
+
+    <script
+      src="https://kit.fontawesome.com/b50fc748ca.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

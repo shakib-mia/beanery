@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-montserrat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-philosopher;
+}
+
+h1 {
+  @apply text-[4rem] leading-[80px] sm:text-[5rem] sm:leading-[100px] md:text-[6rem] md:leading-[110px] lg:text-[7rem] lg:leading-[115px] xl:text-[7.5rem] xl:leading-[120px];
+}
+
+button {
+  @apply rounded-md bg-primary-light px-7 py-3 text-white outline-1 outline-offset-2 outline-primary-light transition hover:bg-primary focus:outline;
+}
+
+button.btn-outline {
+  @apply rounded-md border border-primary-light bg-transparent px-7 py-3 text-black outline-1 outline-offset-2 outline-primary-light transition hover:bg-primary-light hover:text-white;
+}
+
+#navbar {
+  transition: all 0.5s ease;
+  @apply fixed left-0 top-0 h-0 pt-0 shadow-xl md:static md:pt-0 xl:h-auto xl:shadow-none;
+}
+
+#nav-check:checked ~ #navbar {
+  @apply h-[28rem] pt-28 xl:h-auto xl:pt-0;
+}
