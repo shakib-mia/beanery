@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-montserrat;
+  @apply font-montserrat text-sm xl:text-base;
 }
 
 h1,
@@ -16,11 +16,30 @@ h5 {
 }
 
 h1 {
-  @apply text-[4rem] leading-[80px] sm:text-[5rem] sm:leading-[100px] md:text-[6rem] md:leading-[110px] lg:text-[7rem] lg:leading-[115px] xl:text-[7.5rem] xl:leading-[120px];
+  @apply text-[4rem] leading-[80px] sm:text-[5rem] sm:leading-[100px] md:text-8xl md:leading-[110px] lg:text-[7rem] lg:leading-[115px] xl:text-[7.5rem] xl:leading-[120px];
+}
+
+h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+h3 {
+  @apply text-base md:text-lg lg:text-xl xl:text-2xl;
+}
+
+h4 {
+  @apply text-sm md:text-base xl:text-lg;
 }
 
 button {
   @apply rounded-md bg-primary-light px-7 py-3 text-white outline-1 outline-offset-2 outline-primary-light transition hover:bg-primary focus:outline;
+}
+
+button.tab {
+  @apply rounded-md bg-transparent px-7 py-3 text-primary outline-1 outline-offset-2 outline-primary-light transition focus:bg-primary-light focus:outline active:hover:bg-primary;
+}
+
+button.tab.active {
+  @apply bg-primary text-white;
 }
 
 button.btn-outline {
@@ -34,4 +53,31 @@ button.btn-outline {
 
 #nav-check:checked ~ #navbar {
   @apply h-[28rem] pt-28 xl:h-auto xl:pt-0;
+}
+
+.tabs {
+  @apply flex justify-center;
+}
+
+.tab-link {
+  padding: 8px 24px;
+  border: none;
+  /* background-color: #f1f1f1; */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 2px;
+  @apply bg-white text-primary hover:text-white;
+}
+
+.tab-link.active {
+  /* background-color: #3963bf; */
+  @apply bg-primary text-white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
 }
