@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Beanery - The Art of Coffee</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- <nav
@@ -540,7 +541,9 @@
       <div class="container">
         <div class="grid grid-cols-1 items-center gap-9 lg:grid-cols-2">
           <aside>
+            <!-- Special Feature Heading -->
             <h2 class="mb-4 font-bold">Our Special Features</h2>
+            <!-- Special Feature Text -->
             <p class="mb-8">
               At Beanery, we pride ourselves on offering an exceptional coffee
               experience that combines tradition with modern innovation. Our
@@ -548,30 +551,117 @@
               coffee, sourcing only the finest organic beans from renowned
               plantations around the world
             </p>
+            <!-- Special Feature Button -->
             <button>Explore</button>
           </aside>
 
           <aside class="grid grid-cols-2 divide-x divide-y divide-primary">
+            <!-- Feature -->
             <div class="flex flex-col items-center justify-center gap-4 py-12">
+              <!-- Feature Image -->
               <img src="./assets/features/Rectangle 33.png" alt="features" />
+              <!-- Feature Text -->
               <h3 class="text-primary">Traditional Flavor</h3>
             </div>
+            <!-- Feature -->
             <div
               class="flex flex-col items-center justify-center gap-4 !border-t-0 py-12"
             >
+              <!-- Feature Image -->
               <img src="./assets/features/Rectangle 35.png" alt="features" />
+              <!-- Feature Text -->
               <h3 class="text-primary">Natural Coffee</h3>
             </div>
+            <!-- Feature -->
             <div
               class="flex flex-col items-center justify-center gap-4 !border-l-0 py-12"
             >
+              <!-- Feature Image -->
               <img src="./assets/features/Rectangle 32.png" alt="features" />
+              <!-- Feature Text -->
               <h3 class="text-primary">Organic Seed</h3>
             </div>
+            <!-- Feature -->
             <div class="flex flex-col items-center justify-center gap-4 py-12">
+              <!-- Feature Image -->
               <img src="./assets/features/Rectangle 34.png" alt="features" />
+              <!-- Feature Text -->
               <h3 class="text-primary">Modern Machine</h3>
             </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Beanery Section -->
+    <section
+      style="background-image: url(./assets/services-bg.png)"
+      class="bg-cover py-8 lg:py-16"
+    >
+      <div class="container">
+        <div
+          class="grid grid-cols-1 items-center gap-10 lg:gap-7 xl:grid-cols-2"
+        >
+          <aside class="relative">
+            <img
+              src="./assets/why-beanery/Rectangle 55.jpg"
+              class="aspect-square object-cover"
+              alt=""
+            />
+            <img
+              src="./assets/why-beanery/Rectangle 54.jpg"
+              class="absolute -bottom-4 -right-2 w-1/2 lg:-bottom-8 lg:right-0"
+              alt=""
+            />
+          </aside>
+
+          <aside class="text-primary">
+            <h2 class="mb-3 font-bold lg:mb-6">Why at Beanery</h2>
+            <p class="text-black">
+              At Beanery, we take immense pride in the coffee beans we use to
+              craft our exceptional beverages. Our commitment to quality and
+              flavor starts with sourcing the finest coffee beans from renowned
+              plantations around the world.
+            </p>
+
+            <div class="my-8 flex flex-col gap-6">
+              <aside>
+                <h3 class="font-bold">Exceptional Coffee Craftsmanship</h3>
+                <div class="h-2 w-full overflow-hidden bg-primary-light">
+                  <div
+                    class="h-2 w-11/12 bg-primary"
+                    data-aos="fade-right"
+                    data-aos-duration="3000"
+                  ></div>
+                </div>
+              </aside>
+
+              <aside>
+                <h3 class="font-bold">Warm and Inviting Ambiance</h3>
+                <div class="h-2 w-full overflow-hidden bg-primary-light">
+                  <div
+                    class="h-2 w-9/12 bg-primary"
+                    data-aos="fade-right"
+                    data-aos-duration="3000"
+                  ></div>
+                </div>
+              </aside>
+
+              <aside>
+                <h3 class="font-bold">
+                  Sustainable & Socially Conscious Practice
+                </h3>
+                <div class="h-2 w-full overflow-hidden bg-primary-light">
+                  <div
+                    class="h-2 w-10/12 bg-primary"
+                    data-aos="fade-right"
+                    data-aos-duration="3000"
+                  ></div>
+                </div>
+              </aside>
+            </div>
+
+            <button>Explore More</button>
           </aside>
         </div>
       </div>
@@ -581,6 +671,10 @@
       src="https://kit.fontawesome.com/b50fc748ca.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
