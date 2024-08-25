@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Beanery - The Art of Coffee</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- <nav
@@ -57,7 +61,7 @@
     </nav> -->
 
     <nav
-      class="container absolute left-0 right-0 top-0 mx-auto flex items-center justify-between py-6 text-primary xl:py-[2.44rem]"
+      class="container absolute left-0 right-0 top-0 mx-auto flex items-center justify-between py-2 text-primary xl:py-[2.44rem]"
     >
       <!-- Logo -->
       <a href="#" class="z-[9999] inline-block font-semibold">
@@ -102,9 +106,11 @@
       <button class="btn-white hidden">Sign up</button>
     </nav>
 
-    <header class="container flex h-screen items-center">
+    <header
+      class="container flex flex-col items-center lg:h-screen lg:flex-row"
+    >
       <!-- Text Content -->
-      <aside class="mt-8 lg:mt-0 lg:w-[70%]">
+      <aside class="order-2 pb-12 lg:order-1 lg:w-[70%] lg:pb-0">
         <!-- Header -->
         <h1 class="font-bold text-primary">
           Experience the Art of Coffee at Beanery
@@ -128,7 +134,7 @@
       <img
         src="./assets/hero.jpg"
         alt="hero"
-        class="absolute right-0 -z-10 lg:w-1/2"
+        class="relative -right-4 order-1 mt-20 lg:absolute lg:right-0 lg:-z-10 lg:order-2 lg:w-1/2"
       />
     </header>
 
@@ -603,11 +609,13 @@
           class="grid grid-cols-1 items-center gap-10 lg:gap-7 xl:grid-cols-2"
         >
           <aside class="relative">
+            <!-- Why Beanery Left Image -->
             <img
               src="./assets/why-beanery/Rectangle 55.jpg"
               class="aspect-square object-cover"
               alt=""
             />
+            <!-- Why Beanery Right Image -->
             <img
               src="./assets/why-beanery/Rectangle 54.jpg"
               class="absolute -bottom-4 -right-2 w-1/2 lg:-bottom-8 lg:right-0"
@@ -616,7 +624,10 @@
           </aside>
 
           <aside class="text-primary">
+            <!-- Why Beanery Section Heading -->
             <h2 class="mb-3 font-bold lg:mb-6">Why at Beanery</h2>
+            <!-- Why Beanery Section Description -->
+
             <p class="text-black">
               At Beanery, we take immense pride in the coffee beans we use to
               craft our exceptional beverages. Our commitment to quality and
@@ -626,7 +637,9 @@
 
             <div class="my-8 flex flex-col gap-6">
               <aside>
+                <!-- Stat Heading -->
                 <h3 class="font-bold">Exceptional Coffee Craftsmanship</h3>
+                <!-- Stat -->
                 <div class="h-2 w-full overflow-hidden bg-primary-light">
                   <div
                     class="h-2 w-11/12 bg-primary"
@@ -637,7 +650,9 @@
               </aside>
 
               <aside>
+                <!-- Stat Heading -->
                 <h3 class="font-bold">Warm and Inviting Ambiance</h3>
+                <!-- Stat -->
                 <div class="h-2 w-full overflow-hidden bg-primary-light">
                   <div
                     class="h-2 w-9/12 bg-primary"
@@ -648,9 +663,11 @@
               </aside>
 
               <aside>
+                <!-- Stat Heading -->
                 <h3 class="font-bold">
                   Sustainable & Socially Conscious Practice
                 </h3>
+                <!-- Stat -->
                 <div class="h-2 w-full overflow-hidden bg-primary-light">
                   <div
                     class="h-2 w-10/12 bg-primary"
@@ -667,6 +684,327 @@
       </div>
     </section>
 
+    <!-- Testimonial Section -->
+    <section class="bg-primary py-8 text-white lg:py-36">
+      <div class="container">
+        <!-- Section Header and Buttons -->
+        <div
+          class="mb-10 flex flex-col items-center justify-between gap-4 lg:flex-row"
+        >
+          <!-- Section Heading -->
+          <h2>Our Happy Customers</h2>
+
+          <!-- Testimonial Navigation Buttons -->
+          <div class="flex gap-9">
+            <!-- Previous Button -->
+            <button
+              class="slider-button-prev flex !aspect-square w-10 items-center justify-center rounded-full border border-white bg-transparent text-white disabled:border-primary-light disabled:text-primary-light"
+            >
+              <i class="fa fas fa-arrow-left"></i>
+            </button>
+            <!-- Next Button -->
+            <button
+              class="slider-button-next flex !aspect-square w-10 items-center justify-center rounded-full border border-white bg-transparent text-white disabled:border-primary-light disabled:text-primary-light"
+            >
+              <i class="fa fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Testimonial Slider -->
+        <div class="swiper">
+          <!-- Wrapper for All Slides -->
+          <div class="swiper-wrapper">
+            <!-- Individual Slide -->
+            <div class="swiper-slide bg-white p-4 text-black">
+              <!-- Testimonial Content -->
+              <p class="text-center text-lg capitalize lg:p-4">
+                "Beanery is a true gem in our neighborhood. Their coffee is
+                always freshly brewed and bursting with flavor. But what really
+                keeps me coming back is the warm, friendly atmosphere and the
+                genuine care the staff shows to every customer. It's become my
+                go-to spot for catching up with friends or getting some work
+                done in a cozy setting."
+              </p>
+              <!-- Testimonial Author and Rating -->
+              <div class="my-6 flex items-center justify-between text-primary">
+                <h5>Emily S.</h5>
+                <div class="flex gap-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Individual Slide -->
+            <div class="swiper-slide bg-white p-4 text-black">
+              <!-- Testimonial Content -->
+              <p class="text-center text-lg capitalize lg:p-4">
+                As a self-proclaimed coffee connoisseur, I can confidently say
+                that Beanery serves some of the best brews in town. Their
+                baristas are true artists, meticulously crafting each drink to
+                perfection. From their rich, full-bodied espresso to their
+                delightfully creamy lattes, every sip is a delight for the
+                senses. Paired with their delectable baked goods.
+              </p>
+              <!-- Testimonial Author and Rating -->
+              <div class="my-6 flex items-center justify-between text-primary">
+                <h5>Sarah K.</h5>
+                <div class="flex gap-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Individual Slide -->
+            <div class="swiper-slide bg-white p-4 text-black">
+              <!-- Testimonial Content -->
+              <p class="text-center text-lg capitalize lg:p-4">
+                Beanery is more than just a coffee shop; it's a community hub
+                where everyone feels welcome. The cozy ambiance and inviting
+                decor make it the perfect place to unwind after a long day or
+                catch up with friends over a cup of their signature brew. The
+                friendly staff always remembers my order and greets me with a
+                warm smile.
+              </p>
+              <!-- Testimonial Author and Rating -->
+              <div class="my-6 flex items-center justify-between text-primary">
+                <h5>Sarah K.</h5>
+                <div class="flex gap-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Individual Slide -->
+            <div class="swiper-slide bg-white p-4 text-black">
+              <!-- Testimonial Content -->
+              <p class="text-center text-lg capitalize lg:p-4">
+                "Beanery is a true gem in our neighborhood. Their coffee is
+                always freshly brewed and bursting with flavor. But what really
+                keeps me coming back is the warm, friendly atmosphere and the
+                genuine care the staff shows to every customer. It's become my
+                go-to spot for catching up with friends or getting some work
+                done in a cozy setting."
+              </p>
+              <!-- Testimonial Author and Rating -->
+              <div class="my-6 flex items-center justify-between text-primary">
+                <h5>Emily S.</h5>
+                <div class="flex gap-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Individual Slide -->
+            <div class="swiper-slide bg-white p-4 text-black">
+              <!-- Testimonial Content -->
+              <p class="text-center text-lg capitalize lg:p-4">
+                As a self-proclaimed coffee connoisseur, I can confidently say
+                that Beanery serves some of the best brews in town. Their
+                baristas are true artists, meticulously crafting each drink to
+                perfection. From their rich, full-bodied espresso to their
+                delightfully creamy lattes, every sip is a delight for the
+                senses. Paired with their delectable baked goods.
+              </p>
+              <!-- Testimonial Author and Rating -->
+              <div class="my-6 flex items-center justify-between text-primary">
+                <h5>Sarah K.</h5>
+                <div class="flex gap-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Individual Slide -->
+            <div class="swiper-slide bg-white p-4 text-black">
+              <!-- Testimonial Content -->
+              <p class="text-center text-lg capitalize lg:p-4">
+                Beanery is more than just a coffee shop; it's a community hub
+                where everyone feels welcome. The cozy ambiance and inviting
+                decor make it the perfect place to unwind after a long day or
+                catch up with friends over a cup of their signature brew. The
+                friendly staff always remembers my order and greets me with a
+                warm smile.
+              </p>
+              <!-- Testimonial Author and Rating -->
+              <div class="my-6 flex items-center justify-between text-primary">
+                <h5>Sarah K.</h5>
+                <div class="flex gap-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discover Beanery -->
+
+    <section class="container py-8 lg:py-36" id="discover">
+      <div class="flex flex-col items-end gap-4 lg:flex-row lg:gap-0">
+        <div
+          class="relative z-10 w-full rounded-md bg-primary p-9 text-white lg:w-2/3"
+        >
+          <img
+            src="./assets/discover.png"
+            alt="discover"
+            class="absolute -bottom-9 right-9 opacity-10"
+          />
+          <div class="w-5/6">
+            <h2 class="font-bold">Discover the Beanery Experience</h2>
+            <p class="mb-7 mt-4 w-11/12">
+              Beanery offers unparalleled coffee indulgence. Master baristas
+              craft artisanal cups using premium beans. Savor bold espressos,
+              delicate pour-overs, and innovative creations in our inviting
+              ambiance.
+            </p>
+
+            <button class="white">Explore Full Menu</button>
+          </div>
+        </div>
+        <div
+          class="relative h-72 w-full overflow-x-hidden overflow-y-visible lg:-left-4 lg:w-1/3"
+        >
+          <div class="swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./assets/discover-slide/slide1.jpeg"
+                  alt=""
+                  class="rounded-md"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/discover-slide/slide1.jpeg"
+                  alt=""
+                  class="rounded-md"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/discover-slide/slide1.jpeg"
+                  alt=""
+                  class="rounded-md"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/discover-slide/slide1.jpeg"
+                  alt=""
+                  class="rounded-md"
+                />
+              </div>
+            </div>
+
+            <!-- If we need pagination -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="relative bg-cover bg-[center_bottom] bg-no-repeat"
+      style="background-image: url(./assets/footer-bg.jpeg)"
+    >
+      <div class="bg-primary bg-opacity-90 py-16 text-white lg:py-32">
+        <div
+          class="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <aside>
+            <img src="./assets/footer-logo.png" alt="footer-logo" />
+            <p>
+              Indulge in our expertly crafted coffee and immerse yourself in the
+              cozy ambiance of Beanery. Discover the perfect blend of flavor and
+              atmosphere.
+            </p>
+          </aside>
+
+          <aside>
+            <h3 class="mb-2 text-primary-light lg:mb-10">Contact</h3>
+
+            <ul class="flex flex-col gap-4">
+              <li>818 22nd Ave NW Saint Paul, MN 55112-6629 USA</li>
+              <li>Support@raddito.com</li>
+              <li>833-900-8338</li>
+            </ul>
+          </aside>
+
+          <aside>
+            <h3 class="mb-2 text-primary-light lg:mb-10">Opening Hour</h3>
+
+            <p>Monday - Friday: ........6am - 9pm</p>
+            <p>Saturday: ........6am - 10pm</p>
+            <p>Sunday: ........Closed</p>
+            <p>*Close on special days</p>
+          </aside>
+
+          <aside>
+            <h3 class="mb-2 text-primary-light lg:mb-10">Despina Video</h3>
+
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-primary-light transition duration-500 hover:text-white"
+              >
+                <i class="fa fa-facebook-f text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-primary-light transition duration-500 hover:text-white"
+              >
+                <i class="fa fa-twitter text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-primary-light transition duration-500 hover:text-white"
+              >
+                <i class="fa fa-instagram text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-primary-light transition duration-500 hover:text-white"
+              >
+                <i class="fa fa-pinterest text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-primary-light transition duration-500 hover:text-white"
+              >
+                <i class="fa fa-google text-2xl"></i>
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <div
+          class="absolute bottom-0 w-full bg-black bg-opacity-25 py-3 text-primary-light lg:py-7"
+        >
+          <div class="container text-center">
+            Copyright © 2024 Developed by Raddito LLC.
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script
       src="https://kit.fontawesome.com/b50fc748ca.js"
       crossorigin="anonymous"
@@ -675,6 +1013,7 @@
     <script>
       AOS.init();
     </script>
+    <script src="https://unpkg.com/lenis@1.1.11/dist/lenis.min.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

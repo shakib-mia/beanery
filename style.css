@@ -30,12 +30,20 @@ h4 {
   @apply text-sm md:text-base xl:text-lg;
 }
 
+h5 {
+  @apply text-base md:text-lg xl:text-xl;
+}
+
 button {
   @apply rounded-md bg-primary-light px-7 py-3 text-white outline-1 outline-offset-2 outline-primary-light transition hover:bg-primary focus:outline;
 }
 
 button.tab {
   @apply rounded-md bg-transparent px-7 py-3 text-primary outline-1 outline-offset-2 outline-primary-light transition focus:bg-primary-light focus:outline active:hover:bg-primary;
+}
+
+button.white {
+  @apply bg-white text-primary;
 }
 
 button.tab.active {
@@ -80,4 +88,16 @@ button.btn-outline {
 
 .tab-content.active {
   display: block;
+}
+
+.swiper-pagination-bullet {
+  @apply !h-3 !w-3 !rounded-full !bg-gray-300 transition-[width] duration-700;
+}
+
+.swiper-pagination {
+  /* @apply !-bottom-12; */
+}
+
+.swiper-pagination-bullet-active {
+  @apply !w-10 !rounded-full !bg-primary;
 }
