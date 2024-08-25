@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  @apply w-0;
+}
+
 body {
   @apply font-montserrat text-sm xl:text-base;
 }

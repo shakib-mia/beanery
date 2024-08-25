@@ -12,7 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- <nav
       class="container absolute left-0 right-0 top-0 mx-auto flex justify-between bg-white py-2 lg:mt-0 lg:items-center lg:bg-transparent"
     >
@@ -61,49 +61,56 @@
     </nav> -->
 
     <nav
-      class="container absolute left-0 right-0 top-0 mx-auto flex items-center justify-between py-2 text-primary xl:py-[2.44rem]"
+      class="fixed left-0 top-0 z-[9999999999999] mx-auto w-screen text-primary"
+      id="navbar-container"
     >
-      <!-- Logo -->
-      <a href="#" class="z-[9999] inline-block font-semibold">
-        <img src="./assets/logo.png" class="z-10 w-1/2" alt="logo" />
-      </a>
+      <div class="container flex items-center justify-between py-6">
+        <!-- Logo -->
+        <a href="#" class="z-[9999] inline-block font-semibold">
+          <img src="./assets/logo.png" class="z-10 w-1/2" alt="logo" />
+        </a>
 
-      <!-- Hamburger Menu (for mobile) -->
-      <label class="z-[9999] md:hidden" for="nav-check">
-        <i class="fa fa-bars"></i>
-      </label>
-      <input type="checkbox" class="hidden" id="nav-check" />
+        <!-- Hamburger Menu (for mobile) -->
+        <label class="z-[9999] md:hidden" for="nav-check">
+          <i class="fa fa-bars"></i>
+        </label>
+        <input type="checkbox" class="hidden" id="nav-check" />
 
-      <!-- Nav Links -->
-      <div
-        class="absolute left-[-21px] top-24 z-50 w-screen overflow-hidden bg-white md:static md:h-auto md:w-auto md:flex-row md:bg-transparent"
-        id="navbar"
-      >
-        <ul
-          class="container flex flex-col items-end gap-[2.69rem] lg:items-center xl:flex-row"
+        <!-- Nav Links -->
+        <div
+          class="absolute left-[-21px] top-24 z-50 w-screen overflow-hidden bg-white md:static md:h-auto md:w-auto md:flex-row md:bg-transparent"
+          id="navbar"
         >
-          <li class="text-base">
-            <a class="underline-offset-4 hover:underline" href="#"
-              >Discover Beanery</a
-            >
-          </li>
-          <li class="text-base">
-            <a class="underline-offset-4 hover:underline" href="#">Menu</a>
-          </li>
-          <li class="text-base">
-            <a class="underline-offset-4 hover:underline" href="#">About Us</a>
-          </li>
-          <li class="text-base">
-            <a class="underline-offset-4 hover:underline" href="#">Location</a>
-          </li>
+          <ul
+            class="container flex flex-col items-end gap-[2.69rem] lg:items-center xl:flex-row"
+          >
+            <li class="text-base">
+              <a class="underline-offset-4 hover:underline" href="#"
+                >Discover Beanery</a
+              >
+            </li>
+            <li class="text-base">
+              <a class="underline-offset-4 hover:underline" href="#">Menu</a>
+            </li>
+            <li class="text-base">
+              <a class="underline-offset-4 hover:underline" href="#"
+                >About Us</a
+              >
+            </li>
+            <li class="text-base">
+              <a class="underline-offset-4 hover:underline" href="#"
+                >Location</a
+              >
+            </li>
 
-          <!-- Booking Button -->
-          <button>Book a Table</button>
-        </ul>
+            <!-- Booking Button -->
+            <button>Book a Table</button>
+          </ul>
+        </div>
+
+        <!-- Sign Up Button (hidden on small screens) -->
+        <button class="btn-white hidden">Sign up</button>
       </div>
-
-      <!-- Sign Up Button (hidden on small screens) -->
-      <button class="btn-white hidden">Sign up</button>
     </nav>
 
     <header
@@ -112,12 +119,21 @@
       <!-- Text Content -->
       <aside class="order-2 pb-12 lg:order-1 lg:w-[70%] lg:pb-0">
         <!-- Header -->
-        <h1 class="font-bold text-primary">
+        <h1
+          class="font-bold text-primary"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           Experience the Art of Coffee at Beanery
         </h1>
 
         <!-- Paragraph -->
-        <p class="mt-6 lg:w-3/4">
+        <p
+          class="mt-6 lg:w-3/4"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        >
           Indulge in our expertly crafted coffee and immerse yourself in the
           cozy ambiance of Beanery. Discover the perfect blend of flavor and
           atmosphere.
@@ -125,8 +141,20 @@
 
         <!-- Call to Action Buttons -->
         <div class="mt-10 flex gap-6">
-          <button>Explore More</button>
-          <button class="btn-outline">Explore More</button>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            <button>Explore More</button>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <button class="btn-outline">Learn More</button>
+          </div>
         </div>
       </aside>
 
@@ -135,6 +163,9 @@
         src="./assets/hero.jpg"
         alt="hero"
         class="relative -right-4 order-1 mt-20 lg:absolute lg:right-0 lg:-z-10 lg:order-2 lg:w-1/2"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="100"
       />
     </header>
 
@@ -144,10 +175,19 @@
         <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <!-- About Image -->
           <aside class="relative">
-            <img src="./assets/hero/people.jpg" class="w-full rounded" alt="" />
+            <img
+              src="./assets/hero/people.jpg"
+              class="w-full rounded"
+              alt=""
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            />
             <img
               src="./assets/hero/coffee.jpg"
               class="absolute -bottom-2 -right-2 rounded lg:-bottom-4 lg:-right-4"
+              data-aos="fade-right"
+              data-aos-duration="1000"
               alt=""
             />
           </aside>
@@ -155,10 +195,16 @@
           <!-- About Text -->
           <aside>
             <!-- About Heading -->
-            <h2>Indulge in Artisanal Coffee and Delightful Food</h2>
+            <h2 data-aos="fade-left" data-aos-duration="1000">
+              Indulge in Artisanal Coffee and Delightful Food
+            </h2>
 
             <!-- About Paragraph -->
-            <p class="mt-3 lg:mt-6">
+            <p
+              class="mt-3 lg:mt-6"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               Experience the perfect blend of handcrafted coffee and delicious
               food at Beanery. Our artisanal offerings are made with passion and
               precision to deliver an exceptional culinary experience.
@@ -168,7 +214,7 @@
               class="mb-6 mt-4 grid grid-cols-2 gap-6 lg:mb-12 lg:mt-8 lg:gap-12"
             >
               <!-- Quality -->
-              <aside>
+              <aside data-aos="fade-left" data-aos-duration="1000">
                 <!-- Quality Heading -->
                 <h3>Quality</h3>
 
@@ -180,7 +226,11 @@
               </aside>
 
               <!-- Craftsmanship -->
-              <aside>
+              <aside
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
                 <!-- Craftsmanship Heading -->
                 <h3>Craftsmanship</h3>
                 <!-- Craftsmanship Paragraph -->
@@ -192,7 +242,9 @@
             </div>
 
             <!-- About Button -->
-            <button>Explore</button>
+            <div data-aos="fade-left" data-aos-duration="1000">
+              <button>Explore</button>
+            </div>
           </aside>
         </div>
       </div>
@@ -205,14 +257,28 @@
     >
       <div class="container">
         <!-- Services Header -->
-        <h2 class="text-center text-primary">What We Have In Here</h2>
+        <h2
+          class="text-center text-primary"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          What We Have In Here
+        </h2>
 
         <!-- Services tabs -->
         <div class="tabs mb-12 mt-6 flex-wrap gap-2">
-          <button class="tab-link active" data-tab="tab1">Coffee</button>
-          <button class="tab-link" data-tab="tab2">Tea</button>
-          <button class="tab-link" data-tab="tab3">Snacks</button>
-          <button class="tab-link" data-tab="tab4">Ice Cream</button>
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <button class="tab-link active" data-tab="tab1">Coffee</button>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <button class="tab-link" data-tab="tab2">Tea</button>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <button class="tab-link" data-tab="tab3">Snacks</button>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+            <button class="tab-link" data-tab="tab4">Ice Cream</button>
+          </div>
         </div>
 
         <!-- Service Contents -->
@@ -221,12 +287,17 @@
             class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
           >
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -240,12 +311,17 @@
             </article>
 
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40-1.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -259,12 +335,17 @@
             </article>
 
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40-2.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -278,12 +359,17 @@
             </article>
 
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="1000"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40-3.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -297,12 +383,17 @@
             </article>
 
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40-4.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -316,12 +407,17 @@
             </article>
 
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40-5.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -335,12 +431,17 @@
             </article>
 
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40-6.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -354,12 +455,17 @@
             </article>
 
             <!-- Service -->
-            <article>
+            <article
+              class="group overflow-hidden"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="1000"
+            >
               <!-- Service Image -->
               <img
                 src="./assets/services/Rectangle 40-7.jpg"
                 alt=""
-                class="w-full"
+                class="w-full transition group-hover:scale-110"
               />
               <div class="my-3 flex justify-between">
                 <!-- Service Heading -->
@@ -548,9 +654,15 @@
         <div class="grid grid-cols-1 items-center gap-9 lg:grid-cols-2">
           <aside>
             <!-- Special Feature Heading -->
-            <h2 class="mb-4 font-bold">Our Special Features</h2>
+            <h2
+              class="mb-4 font-bold"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Our Special Features
+            </h2>
             <!-- Special Feature Text -->
-            <p class="mb-8">
+            <p class="mb-8" data-aos="fade-right" data-aos-duration="1000">
               At Beanery, we pride ourselves on offering an exceptional coffee
               experience that combines tradition with modern innovation. Our
               baristas are dedicated to preserving the traditional flavors of
@@ -558,14 +670,21 @@
               plantations around the world
             </p>
             <!-- Special Feature Button -->
-            <button>Explore</button>
+            <div data-aos="fade-right" data-aos-duration="1000">
+              <button>Explore</button>
+            </div>
           </aside>
 
           <aside class="grid grid-cols-2 divide-x divide-y divide-primary">
             <!-- Feature -->
             <div class="flex flex-col items-center justify-center gap-4 py-12">
               <!-- Feature Image -->
-              <img src="./assets/features/Rectangle 33.png" alt="features" />
+              <img
+                src="./assets/features/Rectangle 33.png"
+                alt="features"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+              />
               <!-- Feature Text -->
               <h3 class="text-primary">Traditional Flavor</h3>
             </div>
@@ -574,7 +693,12 @@
               class="flex flex-col items-center justify-center gap-4 !border-t-0 py-12"
             >
               <!-- Feature Image -->
-              <img src="./assets/features/Rectangle 35.png" alt="features" />
+              <img
+                src="./assets/features/Rectangle 35.png"
+                alt="features"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+              />
               <!-- Feature Text -->
               <h3 class="text-primary">Natural Coffee</h3>
             </div>
@@ -583,14 +707,24 @@
               class="flex flex-col items-center justify-center gap-4 !border-l-0 py-12"
             >
               <!-- Feature Image -->
-              <img src="./assets/features/Rectangle 32.png" alt="features" />
+              <img
+                src="./assets/features/Rectangle 32.png"
+                alt="features"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+              />
               <!-- Feature Text -->
               <h3 class="text-primary">Organic Seed</h3>
             </div>
             <!-- Feature -->
             <div class="flex flex-col items-center justify-center gap-4 py-12">
               <!-- Feature Image -->
-              <img src="./assets/features/Rectangle 34.png" alt="features" />
+              <img
+                src="./assets/features/Rectangle 34.png"
+                alt="features"
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+              />
               <!-- Feature Text -->
               <h3 class="text-primary">Modern Machine</h3>
             </div>
@@ -614,21 +748,32 @@
               src="./assets/why-beanery/Rectangle 55.jpg"
               class="aspect-square object-cover"
               alt=""
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="100"
             />
             <!-- Why Beanery Right Image -->
             <img
               src="./assets/why-beanery/Rectangle 54.jpg"
               class="absolute -bottom-4 -right-2 w-1/2 lg:-bottom-8 lg:right-0"
               alt=""
+              data-aos="fade-right"
+              data-aos-duration="1000"
             />
           </aside>
 
           <aside class="text-primary">
             <!-- Why Beanery Section Heading -->
-            <h2 class="mb-3 font-bold lg:mb-6">Why at Beanery</h2>
+            <h2
+              class="mb-3 font-bold lg:mb-6"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              Why at Beanery
+            </h2>
             <!-- Why Beanery Section Description -->
 
-            <p class="text-black">
+            <p class="text-black" data-aos="fade-left" data-aos-duration="1000">
               At Beanery, we take immense pride in the coffee beans we use to
               craft our exceptional beverages. Our commitment to quality and
               flavor starts with sourcing the finest coffee beans from renowned
@@ -638,47 +783,83 @@
             <div class="my-8 flex flex-col gap-6">
               <aside>
                 <!-- Stat Heading -->
-                <h3 class="font-bold">Exceptional Coffee Craftsmanship</h3>
+                <h3
+                  class="font-bold"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  Exceptional Coffee Craftsmanship
+                </h3>
                 <!-- Stat -->
-                <div class="h-2 w-full overflow-hidden bg-primary-light">
+                <div
+                  class="h-2 w-full overflow-hidden bg-primary-light"
+                  data-aos="fade-left"
+                  data-aos-delay="100"
+                  data-aos-duration="1000"
+                >
                   <div
                     class="h-2 w-11/12 bg-primary"
                     data-aos="fade-right"
                     data-aos-duration="3000"
+                    data-aos-delay="1000"
                   ></div>
                 </div>
               </aside>
 
               <aside>
                 <!-- Stat Heading -->
-                <h3 class="font-bold">Warm and Inviting Ambiance</h3>
+                <h3
+                  class="font-bold"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
+                  Warm and Inviting Ambiance
+                </h3>
                 <!-- Stat -->
-                <div class="h-2 w-full overflow-hidden bg-primary-light">
+                <div
+                  class="h-2 w-full overflow-hidden bg-primary-light"
+                  data-aos="fade-left"
+                  data-aos-delay="100"
+                  data-aos-duration="1000"
+                >
                   <div
                     class="h-2 w-9/12 bg-primary"
                     data-aos="fade-right"
                     data-aos-duration="3000"
+                    data-aos-delay="1000"
                   ></div>
                 </div>
               </aside>
 
               <aside>
                 <!-- Stat Heading -->
-                <h3 class="font-bold">
+                <h3
+                  class="font-bold"
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                >
                   Sustainable & Socially Conscious Practice
                 </h3>
                 <!-- Stat -->
-                <div class="h-2 w-full overflow-hidden bg-primary-light">
+                <div
+                  class="h-2 w-full overflow-hidden bg-primary-light"
+                  data-aos="fade-left"
+                  data-aos-delay="100"
+                  data-aos-duration="1000"
+                >
                   <div
                     class="h-2 w-10/12 bg-primary"
                     data-aos="fade-right"
                     data-aos-duration="3000"
+                    data-aos-delay="1000"
                   ></div>
                 </div>
               </aside>
             </div>
 
-            <button>Explore More</button>
+            <div data-aos="fade-left" data-aos-duration="1000">
+              <button>Explore More</button>
+            </div>
           </aside>
         </div>
       </div>
@@ -692,7 +873,9 @@
           class="mb-10 flex flex-col items-center justify-between gap-4 lg:flex-row"
         >
           <!-- Section Heading -->
-          <h2>Our Happy Customers</h2>
+          <h2 data-aos="fade-right" data-aos-duration="1000">
+            Our Happy Customers
+          </h2>
 
           <!-- Testimonial Navigation Buttons -->
           <div class="flex gap-9">
@@ -865,19 +1048,37 @@
             class="absolute -bottom-9 right-9 opacity-10"
           />
           <div class="w-5/6">
-            <h2 class="font-bold">Discover the Beanery Experience</h2>
-            <p class="mb-7 mt-4 w-11/12">
+            <!-- Section Heading -->
+            <h2
+              class="font-bold"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              Discover the Beanery Experience
+            </h2>
+            <!-- Section Text -->
+
+            <p
+              class="mb-7 mt-4 w-11/12"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               Beanery offers unparalleled coffee indulgence. Master baristas
               craft artisanal cups using premium beans. Savor bold espressos,
               delicate pour-overs, and innovative creations in our inviting
               ambiance.
             </p>
 
-            <button class="white">Explore Full Menu</button>
+            <!-- Section Button -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+              <button class="white">Explore Full Menu</button>
+            </div>
           </div>
         </div>
         <div
           class="relative h-72 w-full overflow-x-hidden overflow-y-visible lg:-left-4 lg:w-1/3"
+          data-aos="fade-left"
+          data-aos-duration="1000"
         >
           <div class="swiper2">
             <div class="swiper-wrapper">
@@ -962,34 +1163,39 @@
 
             <div class="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/RadditoLLC"
+                target="_blank"
                 class="text-primary-light transition duration-500 hover:text-white"
               >
                 <i class="fa fa-facebook-f text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://twitter.com/RadditoLLC"
+                target="_blank"
                 class="text-primary-light transition duration-500 hover:text-white"
               >
                 <i class="fa fa-twitter text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/radditollc"
+                target="_blank"
                 class="text-primary-light transition duration-500 hover:text-white"
               >
                 <i class="fa fa-instagram text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://www.pinterest.com/radditollc/"
+                target="_blank"
                 class="text-primary-light transition duration-500 hover:text-white"
               >
                 <i class="fa fa-pinterest text-2xl"></i>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/radditollc/"
+                target="_blank"
                 class="text-primary-light transition duration-500 hover:text-white"
               >
-                <i class="fa fa-google text-2xl"></i>
+                <i class="fab fa-linkedin-in text-2xl"></i>
               </a>
             </div>
           </aside>
@@ -999,7 +1205,13 @@
           class="absolute bottom-0 w-full bg-black bg-opacity-25 py-3 text-primary-light lg:py-7"
         >
           <div class="container text-center">
-            Copyright © 2024 Developed by Raddito LLC.
+            Copyright © 2024 Developed by
+            <a
+              href="https://raddito.com/"
+              class="underline hover:no-underline"
+              target="_blank"
+              >Raddito LLC</a
+            >.
           </div>
         </div>
       </div>
