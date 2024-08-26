@@ -13,1209 +13,1222 @@
     />
   </head>
   <body class="overflow-x-hidden">
-    <!-- <nav
-      class="container absolute left-0 right-0 top-0 mx-auto flex justify-between bg-white py-2 lg:mt-0 lg:items-center lg:bg-transparent"
-    >
-      <img
-        src="./assets/logo.jpg"
-        class="z-10 h-fit w-1/3 lg:w-1/6"
-        alt="logo"
-      />
-
-      <label for="navcheck" class="z-50 flex items-center lg:hidden">
-        <i class="fa fa-bars"></i>
-      </label>
-
-      <input type="checkbox" id="navcheck" class="hidden" />
-
-      <ul
-        class="absolute right-0 flex w-full flex-col items-end gap-10 overflow-hidden px-4 pt-20 shadow-xl lg:static lg:w-fit lg:flex-row lg:items-center lg:overflow-visible lg:px-0 lg:pt-0 lg:shadow-none"
-        id="navbar"
+    <div class="w-screen overflow-x-hidden">
+      <!-- Navbar -->
+      <nav
+        class="fixed left-0 top-0 z-[9999999999999] mx-auto w-screen text-primary"
+        id="navbar-container"
       >
-        <li class="group hover:text-primary">
-          <a class="font-medium" href="#"> Discover Beanery </a>
-          <div
-            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
-          ></div>
-        </li>
-        <li class="group hover:text-primary">
-          <a class="font-medium" href="#"> Menu </a>
-          <div
-            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
-          ></div>
-        </li>
-        <li class="group hover:text-primary">
-          <a class="font-medium" href="#"> About Us </a>
-          <div
-            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
-          ></div>
-        </li>
-        <li class="group hover:text-primary">
-          <a class="font-medium" href="#"> Location </a>
-          <div
-            class="mx-auto h-px w-0 bg-primary transition-[width] duration-300 group-hover:w-full"
-          ></div>
-        </li>
-        <button>Book A Table</button>
-      </ul>
-    </nav> -->
+        <div class="container flex items-center justify-between py-2 lg:py-6">
+          <!-- Logo -->
+          <a href="#" class="z-[9999] inline-block font-semibold">
+            <img src="./assets/logo.png" class="z-10 w-1/2" alt="logo" />
+          </a>
 
-    <nav
-      class="fixed left-0 top-0 z-[9999999999999] mx-auto w-screen text-primary"
-      id="navbar-container"
-    >
-      <div class="container flex items-center justify-between py-6">
-        <!-- Logo -->
-        <a href="#" class="z-[9999] inline-block font-semibold">
-          <img src="./assets/logo.png" class="z-10 w-1/2" alt="logo" />
-        </a>
+          <!-- Hamburger Menu (for mobile) -->
+          <label class="z-[9999] md:hidden" for="nav-check">
+            <i class="fa fa-bars text-xl"></i>
+          </label>
+          <input type="checkbox" class="hidden" id="nav-check" />
 
-        <!-- Hamburger Menu (for mobile) -->
-        <label class="z-[9999] md:hidden" for="nav-check">
-          <i class="fa fa-bars"></i>
-        </label>
-        <input type="checkbox" class="hidden" id="nav-check" />
-
-        <!-- Nav Links -->
-        <div
-          class="absolute left-[-21px] top-24 z-50 w-screen overflow-hidden bg-white md:static md:h-auto md:w-auto md:flex-row md:bg-transparent"
-          id="navbar"
-        >
-          <ul
-            class="container flex flex-col items-end gap-[2.69rem] lg:items-center xl:flex-row"
+          <!-- Nav Links -->
+          <div
+            class="absolute left-[-21px] top-24 z-50 w-screen overflow-hidden bg-white md:static md:h-auto md:w-auto md:flex-row md:bg-transparent"
+            id="navbar"
           >
-            <li class="text-base">
-              <a class="underline-offset-4 hover:underline" href="#"
-                >Discover Beanery</a
-              >
-            </li>
-            <li class="text-base">
-              <a class="underline-offset-4 hover:underline" href="#">Menu</a>
-            </li>
-            <li class="text-base">
-              <a class="underline-offset-4 hover:underline" href="#"
-                >About Us</a
-              >
-            </li>
-            <li class="text-base">
-              <a class="underline-offset-4 hover:underline" href="#"
-                >Location</a
-              >
-            </li>
+            <ul
+              class="container flex flex-col items-end gap-[2.69rem] lg:items-center xl:flex-row"
+            >
+              <li class="group relative text-base">
+                <a href="#">Discover Beanery</a>
+                <div
+                  class="h-px w-0 bg-primary transition-[width] group-hover:w-full"
+                ></div>
+              </li>
+              <li class="group relative text-base">
+                <a href="#">Menu</a>
+                <div
+                  class="h-px w-0 bg-primary transition-[width] group-hover:w-full"
+                ></div>
+              </li>
+              <li class="group relative text-base">
+                <a href="#">About Us</a>
+                <div
+                  class="h-px w-0 bg-primary transition-[width] group-hover:w-full"
+                ></div>
+              </li>
+              <li class="group relative text-base">
+                <a href="#">Location</a>
+                <div
+                  class="h-px w-0 bg-primary transition-[width] group-hover:w-full"
+                ></div>
+              </li>
 
-            <!-- Booking Button -->
-            <button>Book a Table</button>
-          </ul>
+              <!-- Booking Button -->
+              <button>Book a Table</button>
+            </ul>
+          </div>
+
+          <!-- Sign Up Button (hidden on small screens) -->
+          <button class="btn-white hidden">Sign up</button>
         </div>
+      </nav>
 
-        <!-- Sign Up Button (hidden on small screens) -->
-        <button class="btn-white hidden">Sign up</button>
-      </div>
-    </nav>
-
-    <header
-      class="container flex flex-col items-center lg:h-screen lg:flex-row"
-    >
-      <!-- Text Content -->
-      <aside class="order-2 pb-12 lg:order-1 lg:w-[70%] lg:pb-0">
-        <!-- Header -->
-        <h1
-          class="font-bold text-primary"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          Experience the Art of Coffee at Beanery
-        </h1>
-
-        <!-- Paragraph -->
-        <p
-          class="mt-6 lg:w-3/4"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-          data-aos-delay="100"
-        >
-          Indulge in our expertly crafted coffee and immerse yourself in the
-          cozy ambiance of Beanery. Discover the perfect blend of flavor and
-          atmosphere.
-        </p>
-
-        <!-- Call to Action Buttons -->
-        <div class="mt-10 flex gap-6">
-          <div
+      <header
+        class="container flex flex-col items-center lg:h-screen lg:flex-row"
+      >
+        <!-- Text Content -->
+        <aside class="order-2 pb-12 lg:order-1 lg:w-[70%] lg:pb-0">
+          <!-- Header -->
+          <h1
+            class="font-bold text-primary"
             data-aos="fade-right"
             data-aos-duration="1000"
-            data-aos-delay="300"
           >
-            <button>Explore More</button>
-          </div>
-          <div
+            Experience the Art of Coffee at Beanery
+          </h1>
+
+          <!-- Paragraph -->
+          <p
+            class="mt-6 lg:w-3/4"
             data-aos="fade-right"
             data-aos-duration="1000"
-            data-aos-delay="200"
+            data-aos-delay="100"
           >
-            <button class="btn-outline">Learn More</button>
-          </div>
-        </div>
-      </aside>
+            Indulge in our expertly crafted coffee and immerse yourself in the
+            cozy ambiance of Beanery. Discover the perfect blend of flavor and
+            atmosphere.
+          </p>
 
-      <!-- Hero Image -->
-      <img
-        src="./assets/hero.jpg"
-        alt="hero"
-        class="relative -right-4 order-1 mt-20 lg:absolute lg:right-0 lg:-z-10 lg:order-2 lg:w-1/2"
-        data-aos="fade-left"
-        data-aos-duration="1000"
-        data-aos-delay="100"
-      />
-    </header>
-
-    <!-- About Section -->
-    <section class="bg-primary bg-opacity-90 py-14 text-white lg:py-28">
-      <div class="container">
-        <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
-          <!-- About Image -->
-          <aside class="relative">
-            <img
-              src="./assets/hero/people.jpg"
-              class="w-full rounded"
-              alt=""
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            />
-            <img
-              src="./assets/hero/coffee.jpg"
-              class="absolute -bottom-2 -right-2 rounded lg:-bottom-4 lg:-right-4"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              alt=""
-            />
-          </aside>
-
-          <!-- About Text -->
-          <aside>
-            <!-- About Heading -->
-            <h2 data-aos="fade-left" data-aos-duration="1000">
-              Indulge in Artisanal Coffee and Delightful Food
-            </h2>
-
-            <!-- About Paragraph -->
-            <p
-              class="mt-3 lg:mt-6"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              Experience the perfect blend of handcrafted coffee and delicious
-              food at Beanery. Our artisanal offerings are made with passion and
-              precision to deliver an exceptional culinary experience.
-            </p>
-
+          <!-- Call to Action Buttons -->
+          <div class="mt-10 flex gap-6">
             <div
-              class="mb-6 mt-4 grid grid-cols-2 gap-6 lg:mb-12 lg:mt-8 lg:gap-12"
-            >
-              <!-- Quality -->
-              <aside data-aos="fade-left" data-aos-duration="1000">
-                <!-- Quality Heading -->
-                <h3>Quality</h3>
-
-                <!-- Quality Paragraph -->
-                <p>
-                  Savor the rich flavors of our carefully sourced coffee beans
-                  and locally inspired dishes.
-                </p>
-              </aside>
-
-              <!-- Craftsmanship -->
-              <aside
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-              >
-                <!-- Craftsmanship Heading -->
-                <h3>Craftsmanship</h3>
-                <!-- Craftsmanship Paragraph -->
-                <p>
-                  Every cup of coffee and every dish is prepared with meticulous
-                  attention to detail.
-                </p>
-              </aside>
-            </div>
-
-            <!-- About Button -->
-            <div data-aos="fade-left" data-aos-duration="1000">
-              <button>Explore</button>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section
-      class="bg-cover py-14 lg:py-56"
-      style="background-image: url(./assets/services-bg.png)"
-    >
-      <div class="container">
-        <!-- Services Header -->
-        <h2
-          class="text-center text-primary"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-        >
-          What We Have In Here
-        </h2>
-
-        <!-- Services tabs -->
-        <div class="tabs mb-12 mt-6 flex-wrap gap-2">
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-            <button class="tab-link active" data-tab="tab1">Coffee</button>
-          </div>
-          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <button class="tab-link" data-tab="tab2">Tea</button>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-            <button class="tab-link" data-tab="tab3">Snacks</button>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-            <button class="tab-link" data-tab="tab4">Ice Cream</button>
-          </div>
-        </div>
-
-        <!-- Service Contents -->
-        <div class="tab-content active" id="tab1">
-          <div
-            class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
-          >
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
-              data-aos-delay="100"
+              data-aos="fade-right"
               data-aos-duration="1000"
-            >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Espresso</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$2.00</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Smooth, robust blend of freshly brewed coffee</p>
-            </article>
-
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-1.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Cappuccino</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$3.75</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Espresso with steamed milk and velvety foam</p>
-            </article>
-
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
               data-aos-delay="300"
-              data-aos-duration="1000"
             >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-2.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Caramel Macchiato</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$4.25</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Espresso-based with caramel sauce and milk froth.</p>
-            </article>
-
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-            >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-3.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Vanilla Latte</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$4.00</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Espresso with steamed vanilla-infused milk.</p>
-            </article>
-
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="1000"
-            >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-4.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Blend Drip Coffee</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$2.00</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Smooth, robust blend of freshly brewed coffee</p>
-            </article>
-
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-5.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Mocha Frappuccino</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$4.75</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Blended iced coffee with chocolate and milk.</p>
-            </article>
-
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-duration="1000"
-            >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-6.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Flat White</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$3.50</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Velvety espresso with steamed milk microfoam.</p>
-            </article>
-
-            <!-- Service -->
-            <article
-              class="group overflow-hidden"
-              data-aos="fade-up"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-            >
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-7.jpg"
-                alt=""
-                class="w-full transition group-hover:scale-110"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Nitro Cold Brew</h4>
-                <!-- Service Price -->
-
-                <h4 class="font-bold text-black">$4.25</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Smooth, naturally sweet cold brew, nitro-infused.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="tab-content" id="tab2">
-          <div
-            class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
-          >
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-3.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Vanilla Latte</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$4.00</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Espresso with steamed vanilla-infused milk.</p>
-            </article>
-
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-5.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Mocha Frappuccino</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$4.75</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Blended iced coffee with chocolate and milk.</p>
-            </article>
-
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-7.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Nitro Cold Brew</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$4.25</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Smooth, naturally sweet cold brew, nitro-infused.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="tab-content" id="tab3">
-          <div
-            class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
-          >
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-1.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Cappuccino</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$3.75</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Espresso with steamed milk and velvety foam</p>
-            </article>
-
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-2.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Caramel Macchiato</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$4.25</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Espresso-based with caramel sauce and milk froth.</p>
-            </article>
-
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-4.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Blend Drip Coffee</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$2.00</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Smooth, robust blend of freshly brewed coffee</p>
-            </article>
-
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-6.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Flat White</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$3.50</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Velvety espresso with steamed milk microfoam.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="tab-content" id="tab4">
-          <div
-            class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
-          >
-            <!-- Service -->
-            <article>
-              <!-- Service Image -->
-              <img
-                src="./assets/services/Rectangle 40-7.jpg"
-                alt=""
-                class="w-full"
-              />
-              <div class="my-3 flex justify-between">
-                <!-- Service Heading -->
-                <h4 class="font-bold text-primary">Nitro Cold Brew</h4>
-                <!-- Service Price -->
-                <h4 class="font-bold text-black">$4.25</h4>
-              </div>
-              <!-- Service Text -->
-              <p>Smooth, naturally sweet cold brew, nitro-infused.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Special Features Section -->
-
-    <section
-      class="bg-cover py-16"
-      style="background-image: url(./assets/special-feature-bg.png)"
-    >
-      <div class="container">
-        <div class="grid grid-cols-1 items-center gap-9 lg:grid-cols-2">
-          <aside>
-            <!-- Special Feature Heading -->
-            <h2
-              class="mb-4 font-bold"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              Our Special Features
-            </h2>
-            <!-- Special Feature Text -->
-            <p class="mb-8" data-aos="fade-right" data-aos-duration="1000">
-              At Beanery, we pride ourselves on offering an exceptional coffee
-              experience that combines tradition with modern innovation. Our
-              baristas are dedicated to preserving the traditional flavors of
-              coffee, sourcing only the finest organic beans from renowned
-              plantations around the world
-            </p>
-            <!-- Special Feature Button -->
-            <div data-aos="fade-right" data-aos-duration="1000">
-              <button>Explore</button>
-            </div>
-          </aside>
-
-          <aside class="grid grid-cols-2 divide-x divide-y divide-primary">
-            <!-- Feature -->
-            <div class="flex flex-col items-center justify-center gap-4 py-12">
-              <!-- Feature Image -->
-              <img
-                src="./assets/features/Rectangle 33.png"
-                alt="features"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-              />
-              <!-- Feature Text -->
-              <h3 class="text-primary">Traditional Flavor</h3>
-            </div>
-            <!-- Feature -->
-            <div
-              class="flex flex-col items-center justify-center gap-4 !border-t-0 py-12"
-            >
-              <!-- Feature Image -->
-              <img
-                src="./assets/features/Rectangle 35.png"
-                alt="features"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-              />
-              <!-- Feature Text -->
-              <h3 class="text-primary">Natural Coffee</h3>
-            </div>
-            <!-- Feature -->
-            <div
-              class="flex flex-col items-center justify-center gap-4 !border-l-0 py-12"
-            >
-              <!-- Feature Image -->
-              <img
-                src="./assets/features/Rectangle 32.png"
-                alt="features"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-              />
-              <!-- Feature Text -->
-              <h3 class="text-primary">Organic Seed</h3>
-            </div>
-            <!-- Feature -->
-            <div class="flex flex-col items-center justify-center gap-4 py-12">
-              <!-- Feature Image -->
-              <img
-                src="./assets/features/Rectangle 34.png"
-                alt="features"
-                data-aos="zoom-in"
-                data-aos-duration="1000"
-              />
-              <!-- Feature Text -->
-              <h3 class="text-primary">Modern Machine</h3>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Beanery Section -->
-    <section
-      style="background-image: url(./assets/services-bg.png)"
-      class="bg-cover py-8 lg:py-16"
-    >
-      <div class="container">
-        <div
-          class="grid grid-cols-1 items-center gap-10 lg:gap-7 xl:grid-cols-2"
-        >
-          <aside class="relative">
-            <!-- Why Beanery Left Image -->
-            <img
-              src="./assets/why-beanery/Rectangle 55.jpg"
-              class="aspect-square object-cover"
-              alt=""
-              data-aos="fade-right"
-              data-aos-duration="1000"
-              data-aos-delay="100"
-            />
-            <!-- Why Beanery Right Image -->
-            <img
-              src="./assets/why-beanery/Rectangle 54.jpg"
-              class="absolute -bottom-4 -right-2 w-1/2 lg:-bottom-8 lg:right-0"
-              alt=""
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            />
-          </aside>
-
-          <aside class="text-primary">
-            <!-- Why Beanery Section Heading -->
-            <h2
-              class="mb-3 font-bold lg:mb-6"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-            >
-              Why at Beanery
-            </h2>
-            <!-- Why Beanery Section Description -->
-
-            <p class="text-black" data-aos="fade-left" data-aos-duration="1000">
-              At Beanery, we take immense pride in the coffee beans we use to
-              craft our exceptional beverages. Our commitment to quality and
-              flavor starts with sourcing the finest coffee beans from renowned
-              plantations around the world.
-            </p>
-
-            <div class="my-8 flex flex-col gap-6">
-              <aside>
-                <!-- Stat Heading -->
-                <h3
-                  class="font-bold"
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                >
-                  Exceptional Coffee Craftsmanship
-                </h3>
-                <!-- Stat -->
-                <div
-                  class="h-2 w-full overflow-hidden bg-primary-light"
-                  data-aos="fade-left"
-                  data-aos-delay="100"
-                  data-aos-duration="1000"
-                >
-                  <div
-                    class="h-2 w-11/12 bg-primary"
-                    data-aos="fade-right"
-                    data-aos-duration="3000"
-                    data-aos-delay="1000"
-                  ></div>
-                </div>
-              </aside>
-
-              <aside>
-                <!-- Stat Heading -->
-                <h3
-                  class="font-bold"
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                >
-                  Warm and Inviting Ambiance
-                </h3>
-                <!-- Stat -->
-                <div
-                  class="h-2 w-full overflow-hidden bg-primary-light"
-                  data-aos="fade-left"
-                  data-aos-delay="100"
-                  data-aos-duration="1000"
-                >
-                  <div
-                    class="h-2 w-9/12 bg-primary"
-                    data-aos="fade-right"
-                    data-aos-duration="3000"
-                    data-aos-delay="1000"
-                  ></div>
-                </div>
-              </aside>
-
-              <aside>
-                <!-- Stat Heading -->
-                <h3
-                  class="font-bold"
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                >
-                  Sustainable & Socially Conscious Practice
-                </h3>
-                <!-- Stat -->
-                <div
-                  class="h-2 w-full overflow-hidden bg-primary-light"
-                  data-aos="fade-left"
-                  data-aos-delay="100"
-                  data-aos-duration="1000"
-                >
-                  <div
-                    class="h-2 w-10/12 bg-primary"
-                    data-aos="fade-right"
-                    data-aos-duration="3000"
-                    data-aos-delay="1000"
-                  ></div>
-                </div>
-              </aside>
-            </div>
-
-            <div data-aos="fade-left" data-aos-duration="1000">
               <button>Explore More</button>
             </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="bg-primary py-8 text-white lg:py-36">
-      <div class="container">
-        <!-- Section Header and Buttons -->
-        <div
-          class="mb-10 flex flex-col items-center justify-between gap-4 lg:flex-row"
-        >
-          <!-- Section Heading -->
-          <h2 data-aos="fade-right" data-aos-duration="1000">
-            Our Happy Customers
-          </h2>
-
-          <!-- Testimonial Navigation Buttons -->
-          <div class="flex gap-9">
-            <!-- Previous Button -->
-            <button
-              class="slider-button-prev flex !aspect-square w-10 items-center justify-center rounded-full border border-white bg-transparent text-white disabled:border-primary-light disabled:text-primary-light"
-            >
-              <i class="fa fas fa-arrow-left"></i>
-            </button>
-            <!-- Next Button -->
-            <button
-              class="slider-button-next flex !aspect-square w-10 items-center justify-center rounded-full border border-white bg-transparent text-white disabled:border-primary-light disabled:text-primary-light"
-            >
-              <i class="fa fas fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Testimonial Slider -->
-        <div class="swiper">
-          <!-- Wrapper for All Slides -->
-          <div class="swiper-wrapper">
-            <!-- Individual Slide -->
-            <div class="swiper-slide bg-white p-4 text-black">
-              <!-- Testimonial Content -->
-              <p class="text-center text-lg capitalize lg:p-4">
-                "Beanery is a true gem in our neighborhood. Their coffee is
-                always freshly brewed and bursting with flavor. But what really
-                keeps me coming back is the warm, friendly atmosphere and the
-                genuine care the staff shows to every customer. It's become my
-                go-to spot for catching up with friends or getting some work
-                done in a cozy setting."
-              </p>
-              <!-- Testimonial Author and Rating -->
-              <div class="my-6 flex items-center justify-between text-primary">
-                <h5>Emily S.</h5>
-                <div class="flex gap-2">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Individual Slide -->
-            <div class="swiper-slide bg-white p-4 text-black">
-              <!-- Testimonial Content -->
-              <p class="text-center text-lg capitalize lg:p-4">
-                As a self-proclaimed coffee connoisseur, I can confidently say
-                that Beanery serves some of the best brews in town. Their
-                baristas are true artists, meticulously crafting each drink to
-                perfection. From their rich, full-bodied espresso to their
-                delightfully creamy lattes, every sip is a delight for the
-                senses. Paired with their delectable baked goods.
-              </p>
-              <!-- Testimonial Author and Rating -->
-              <div class="my-6 flex items-center justify-between text-primary">
-                <h5>Sarah K.</h5>
-                <div class="flex gap-2">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Individual Slide -->
-            <div class="swiper-slide bg-white p-4 text-black">
-              <!-- Testimonial Content -->
-              <p class="text-center text-lg capitalize lg:p-4">
-                Beanery is more than just a coffee shop; it's a community hub
-                where everyone feels welcome. The cozy ambiance and inviting
-                decor make it the perfect place to unwind after a long day or
-                catch up with friends over a cup of their signature brew. The
-                friendly staff always remembers my order and greets me with a
-                warm smile.
-              </p>
-              <!-- Testimonial Author and Rating -->
-              <div class="my-6 flex items-center justify-between text-primary">
-                <h5>Sarah K.</h5>
-                <div class="flex gap-2">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Individual Slide -->
-            <div class="swiper-slide bg-white p-4 text-black">
-              <!-- Testimonial Content -->
-              <p class="text-center text-lg capitalize lg:p-4">
-                "Beanery is a true gem in our neighborhood. Their coffee is
-                always freshly brewed and bursting with flavor. But what really
-                keeps me coming back is the warm, friendly atmosphere and the
-                genuine care the staff shows to every customer. It's become my
-                go-to spot for catching up with friends or getting some work
-                done in a cozy setting."
-              </p>
-              <!-- Testimonial Author and Rating -->
-              <div class="my-6 flex items-center justify-between text-primary">
-                <h5>Emily S.</h5>
-                <div class="flex gap-2">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Individual Slide -->
-            <div class="swiper-slide bg-white p-4 text-black">
-              <!-- Testimonial Content -->
-              <p class="text-center text-lg capitalize lg:p-4">
-                As a self-proclaimed coffee connoisseur, I can confidently say
-                that Beanery serves some of the best brews in town. Their
-                baristas are true artists, meticulously crafting each drink to
-                perfection. From their rich, full-bodied espresso to their
-                delightfully creamy lattes, every sip is a delight for the
-                senses. Paired with their delectable baked goods.
-              </p>
-              <!-- Testimonial Author and Rating -->
-              <div class="my-6 flex items-center justify-between text-primary">
-                <h5>Sarah K.</h5>
-                <div class="flex gap-2">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Individual Slide -->
-            <div class="swiper-slide bg-white p-4 text-black">
-              <!-- Testimonial Content -->
-              <p class="text-center text-lg capitalize lg:p-4">
-                Beanery is more than just a coffee shop; it's a community hub
-                where everyone feels welcome. The cozy ambiance and inviting
-                decor make it the perfect place to unwind after a long day or
-                catch up with friends over a cup of their signature brew. The
-                friendly staff always remembers my order and greets me with a
-                warm smile.
-              </p>
-              <!-- Testimonial Author and Rating -->
-              <div class="my-6 flex items-center justify-between text-primary">
-                <h5>Sarah K.</h5>
-                <div class="flex gap-2">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Discover Beanery -->
-
-    <section class="container py-8 lg:py-36" id="discover">
-      <div class="flex flex-col items-end gap-4 lg:flex-row lg:gap-0">
-        <div
-          class="relative z-10 w-full rounded-md bg-primary p-9 text-white lg:w-2/3"
-        >
-          <img
-            src="./assets/discover.png"
-            alt="discover"
-            class="absolute -bottom-9 right-9 opacity-10"
-          />
-          <div class="w-5/6">
-            <!-- Section Heading -->
-            <h2
-              class="font-bold"
+            <div
               data-aos="fade-right"
               data-aos-duration="1000"
+              data-aos-delay="200"
             >
-              Discover the Beanery Experience
-            </h2>
-            <!-- Section Text -->
-
-            <p
-              class="mb-7 mt-4 w-11/12"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
-              Beanery offers unparalleled coffee indulgence. Master baristas
-              craft artisanal cups using premium beans. Savor bold espressos,
-              delicate pour-overs, and innovative creations in our inviting
-              ambiance.
-            </p>
-
-            <!-- Section Button -->
-            <div data-aos="fade-right" data-aos-duration="1000">
-              <button class="white">Explore Full Menu</button>
+              <button class="btn-outline">Learn More</button>
             </div>
           </div>
-        </div>
-        <div
-          class="relative h-72 w-full overflow-x-hidden overflow-y-visible lg:-left-4 lg:w-1/3"
+        </aside>
+
+        <!-- Hero Image -->
+        <img
+          src="./assets/hero.jpg"
+          alt="hero"
+          class="relative -right-4 order-1 mt-20 lg:absolute lg:right-0 lg:-z-10 lg:order-2 lg:w-1/2"
           data-aos="fade-left"
           data-aos-duration="1000"
-        >
-          <div class="swiper2">
+          data-aos-delay="100"
+        />
+      </header>
+
+      <!-- About Section -->
+      <section class="bg-primary bg-opacity-90 py-14 text-white lg:py-28">
+        <div class="container">
+          <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+            <!-- About Image -->
+            <aside class="relative">
+              <img
+                src="./assets/hero/people.jpg"
+                class="w-full rounded"
+                alt=""
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              />
+              <img
+                src="./assets/hero/coffee.jpg"
+                class="absolute -bottom-2 -right-2 rounded lg:-bottom-4 lg:-right-4"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                alt=""
+              />
+            </aside>
+
+            <!-- About Text -->
+            <aside>
+              <!-- About Heading -->
+              <h2 data-aos="fade-left" data-aos-duration="1000">
+                Indulge in Artisanal Coffee and Delightful Food
+              </h2>
+
+              <!-- About Paragraph -->
+              <p
+                class="mt-3 lg:mt-6"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                Experience the perfect blend of handcrafted coffee and delicious
+                food at Beanery. Our artisanal offerings are made with passion
+                and precision to deliver an exceptional culinary experience.
+              </p>
+
+              <div
+                class="mb-6 mt-4 grid grid-cols-2 gap-6 lg:mb-12 lg:mt-8 lg:gap-12"
+              >
+                <!-- Quality -->
+                <aside data-aos="fade-left" data-aos-duration="1000">
+                  <!-- Quality Heading -->
+                  <h3>Quality</h3>
+
+                  <!-- Quality Paragraph -->
+                  <p>
+                    Savor the rich flavors of our carefully sourced coffee beans
+                    and locally inspired dishes.
+                  </p>
+                </aside>
+
+                <!-- Craftsmanship -->
+                <aside
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                >
+                  <!-- Craftsmanship Heading -->
+                  <h3>Craftsmanship</h3>
+                  <!-- Craftsmanship Paragraph -->
+                  <p>
+                    Every cup of coffee and every dish is prepared with
+                    meticulous attention to detail.
+                  </p>
+                </aside>
+              </div>
+
+              <!-- About Button -->
+              <div data-aos="fade-left" data-aos-duration="1000">
+                <button>Explore</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section
+        class="bg-cover py-14 lg:py-56"
+        style="background-image: url(./assets/services-bg.png)"
+      >
+        <div class="container">
+          <!-- Services Header -->
+          <h2
+            class="text-center text-primary"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
+            What We Have In Here
+          </h2>
+
+          <!-- Services tabs -->
+          <div class="tabs mb-12 mt-6 flex-wrap gap-2">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
+              <button class="tab-link active" data-tab="tab1">Coffee</button>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              <button class="tab-link" data-tab="tab2">Tea</button>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
+              <button class="tab-link" data-tab="tab3">Snacks</button>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="1000"
+            >
+              <button class="tab-link" data-tab="tab4">Ice Cream</button>
+            </div>
+          </div>
+
+          <!-- Service Contents -->
+          <div class="tab-content active" id="tab1">
+            <div
+              class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
+            >
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Espresso</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$2.00</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Smooth, robust blend of freshly brewed coffee</p>
+              </article>
+
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-1.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Cappuccino</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$3.75</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Espresso with steamed milk and velvety foam</p>
+              </article>
+
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-2.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Caramel Macchiato</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$4.25</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Espresso-based with caramel sauce and milk froth.</p>
+              </article>
+
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-3.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Vanilla Latte</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$4.00</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Espresso with steamed vanilla-infused milk.</p>
+              </article>
+
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-4.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Blend Drip Coffee</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$2.00</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Smooth, robust blend of freshly brewed coffee</p>
+              </article>
+
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-5.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Mocha Frappuccino</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$4.75</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Blended iced coffee with chocolate and milk.</p>
+              </article>
+
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-6.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Flat White</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$3.50</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Velvety espresso with steamed milk microfoam.</p>
+              </article>
+
+              <!-- Service -->
+              <article
+                class="group overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+              >
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-7.jpg"
+                  alt=""
+                  class="w-full transition group-hover:scale-110"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Nitro Cold Brew</h4>
+                  <!-- Service Price -->
+
+                  <h4 class="font-bold text-black">$4.25</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Smooth, naturally sweet cold brew, nitro-infused.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab2">
+            <div
+              class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
+            >
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-3.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Vanilla Latte</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$4.00</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Espresso with steamed vanilla-infused milk.</p>
+              </article>
+
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-5.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Mocha Frappuccino</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$4.75</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Blended iced coffee with chocolate and milk.</p>
+              </article>
+
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-7.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Nitro Cold Brew</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$4.25</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Smooth, naturally sweet cold brew, nitro-infused.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab3">
+            <div
+              class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
+            >
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-1.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Cappuccino</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$3.75</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Espresso with steamed milk and velvety foam</p>
+              </article>
+
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-2.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Caramel Macchiato</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$4.25</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Espresso-based with caramel sauce and milk froth.</p>
+              </article>
+
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-4.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Blend Drip Coffee</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$2.00</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Smooth, robust blend of freshly brewed coffee</p>
+              </article>
+
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-6.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Flat White</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$3.50</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Velvety espresso with steamed milk microfoam.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab4">
+            <div
+              class="grid grid-cols-1 gap-x-7 gap-y-10 md:grid-cols-2 lg:grid-cols-4"
+            >
+              <!-- Service -->
+              <article>
+                <!-- Service Image -->
+                <img
+                  src="./assets/services/Rectangle 40-7.jpg"
+                  alt=""
+                  class="w-full"
+                />
+                <div class="my-3 flex justify-between">
+                  <!-- Service Heading -->
+                  <h4 class="font-bold text-primary">Nitro Cold Brew</h4>
+                  <!-- Service Price -->
+                  <h4 class="font-bold text-black">$4.25</h4>
+                </div>
+                <!-- Service Text -->
+                <p>Smooth, naturally sweet cold brew, nitro-infused.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Features Section -->
+
+      <section
+        class="bg-cover py-16"
+        style="background-image: url(./assets/special-feature-bg.png)"
+      >
+        <div class="container">
+          <div class="grid grid-cols-1 items-center gap-9 lg:grid-cols-2">
+            <aside>
+              <!-- Special Feature Heading -->
+              <h2
+                class="mb-4 font-bold"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Our Special Features
+              </h2>
+              <!-- Special Feature Text -->
+              <p class="mb-8" data-aos="fade-right" data-aos-duration="1000">
+                At Beanery, we pride ourselves on offering an exceptional coffee
+                experience that combines tradition with modern innovation. Our
+                baristas are dedicated to preserving the traditional flavors of
+                coffee, sourcing only the finest organic beans from renowned
+                plantations around the world
+              </p>
+              <!-- Special Feature Button -->
+              <div data-aos="fade-right" data-aos-duration="1000">
+                <button>Explore</button>
+              </div>
+            </aside>
+
+            <aside class="grid grid-cols-2 divide-x divide-y divide-primary">
+              <!-- Feature -->
+              <div
+                class="flex flex-col items-center justify-center gap-4 py-12"
+              >
+                <!-- Feature Image -->
+                <img
+                  src="./assets/features/Rectangle 33.png"
+                  alt="features"
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                />
+                <!-- Feature Text -->
+                <h3 class="text-primary">Traditional Flavor</h3>
+              </div>
+              <!-- Feature -->
+              <div
+                class="flex flex-col items-center justify-center gap-4 !border-t-0 py-12"
+              >
+                <!-- Feature Image -->
+                <img
+                  src="./assets/features/Rectangle 35.png"
+                  alt="features"
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                />
+                <!-- Feature Text -->
+                <h3 class="text-primary">Natural Coffee</h3>
+              </div>
+              <!-- Feature -->
+              <div
+                class="flex flex-col items-center justify-center gap-4 !border-l-0 py-12"
+              >
+                <!-- Feature Image -->
+                <img
+                  src="./assets/features/Rectangle 32.png"
+                  alt="features"
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                />
+                <!-- Feature Text -->
+                <h3 class="text-primary">Organic Seed</h3>
+              </div>
+              <!-- Feature -->
+              <div
+                class="flex flex-col items-center justify-center gap-4 py-12"
+              >
+                <!-- Feature Image -->
+                <img
+                  src="./assets/features/Rectangle 34.png"
+                  alt="features"
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                />
+                <!-- Feature Text -->
+                <h3 class="text-primary">Modern Machine</h3>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Beanery Section -->
+      <section
+        style="background-image: url(./assets/services-bg.png)"
+        class="bg-cover py-8 lg:py-16"
+      >
+        <div class="container">
+          <div
+            class="grid grid-cols-1 items-center gap-10 lg:gap-7 xl:grid-cols-2"
+          >
+            <aside class="relative">
+              <!-- Why Beanery Left Image -->
+              <img
+                src="./assets/why-beanery/Rectangle 55.jpg"
+                class="aspect-square object-cover"
+                alt=""
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              />
+              <!-- Why Beanery Right Image -->
+              <img
+                src="./assets/why-beanery/Rectangle 54.jpg"
+                class="absolute -bottom-4 -right-2 w-1/2 lg:-bottom-8 lg:right-0"
+                alt=""
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              />
+            </aside>
+
+            <aside class="text-primary">
+              <!-- Why Beanery Section Heading -->
+              <h2
+                class="mb-3 font-bold lg:mb-6"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                Why at Beanery
+              </h2>
+              <!-- Why Beanery Section Description -->
+
+              <p
+                class="text-black"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                At Beanery, we take immense pride in the coffee beans we use to
+                craft our exceptional beverages. Our commitment to quality and
+                flavor starts with sourcing the finest coffee beans from
+                renowned plantations around the world.
+              </p>
+
+              <div class="my-8 flex flex-col gap-6">
+                <aside>
+                  <!-- Stat Heading -->
+                  <h3
+                    class="font-bold"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                  >
+                    Exceptional Coffee Craftsmanship
+                  </h3>
+                  <!-- Stat -->
+                  <div
+                    class="h-2 w-full overflow-hidden bg-primary-light"
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                    data-aos-duration="1000"
+                  >
+                    <div
+                      class="h-2 w-11/12 bg-primary"
+                      data-aos="fade-right"
+                      data-aos-duration="3000"
+                      data-aos-delay="1000"
+                    ></div>
+                  </div>
+                </aside>
+
+                <aside>
+                  <!-- Stat Heading -->
+                  <h3
+                    class="font-bold"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                  >
+                    Warm and Inviting Ambiance
+                  </h3>
+                  <!-- Stat -->
+                  <div
+                    class="h-2 w-full overflow-hidden bg-primary-light"
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                    data-aos-duration="1000"
+                  >
+                    <div
+                      class="h-2 w-9/12 bg-primary"
+                      data-aos="fade-right"
+                      data-aos-duration="3000"
+                      data-aos-delay="1000"
+                    ></div>
+                  </div>
+                </aside>
+
+                <aside>
+                  <!-- Stat Heading -->
+                  <h3
+                    class="font-bold"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                  >
+                    Sustainable & Socially Conscious Practice
+                  </h3>
+                  <!-- Stat -->
+                  <div
+                    class="h-2 w-full overflow-hidden bg-primary-light"
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                    data-aos-duration="1000"
+                  >
+                    <div
+                      class="h-2 w-10/12 bg-primary"
+                      data-aos="fade-right"
+                      data-aos-duration="3000"
+                      data-aos-delay="1000"
+                    ></div>
+                  </div>
+                </aside>
+              </div>
+
+              <div data-aos="fade-left" data-aos-duration="1000">
+                <button>Explore More</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section class="bg-primary py-8 text-white lg:py-36">
+        <div class="container">
+          <!-- Section Header and Buttons -->
+          <div
+            class="mb-10 flex flex-col items-center justify-between gap-4 lg:flex-row"
+          >
+            <!-- Section Heading -->
+            <h2 data-aos="fade-right" data-aos-duration="1000">
+              Our Happy Customers
+            </h2>
+
+            <!-- Testimonial Navigation Buttons -->
+            <div class="flex gap-9">
+              <!-- Previous Button -->
+              <button
+                class="slider-button-prev flex !aspect-square w-10 items-center justify-center rounded-full border border-white bg-transparent text-white disabled:border-primary-light disabled:text-primary-light"
+              >
+                <i class="fa fas fa-arrow-left"></i>
+              </button>
+              <!-- Next Button -->
+              <button
+                class="slider-button-next flex !aspect-square w-10 items-center justify-center rounded-full border border-white bg-transparent text-white disabled:border-primary-light disabled:text-primary-light"
+              >
+                <i class="fa fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Testimonial Slider -->
+          <div class="swiper">
+            <!-- Wrapper for All Slides -->
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="./assets/discover-slide/slide1.jpeg"
-                  alt=""
-                  class="rounded-md"
-                />
+              <!-- Individual Slide -->
+              <div class="swiper-slide bg-white p-4 text-black">
+                <!-- Testimonial Content -->
+                <p class="text-center text-lg capitalize lg:p-4">
+                  "Beanery is a true gem in our neighborhood. Their coffee is
+                  always freshly brewed and bursting with flavor. But what
+                  really keeps me coming back is the warm, friendly atmosphere
+                  and the genuine care the staff shows to every customer. It's
+                  become my go-to spot for catching up with friends or getting
+                  some work done in a cozy setting."
+                </p>
+                <!-- Testimonial Author and Rating -->
+                <div
+                  class="my-6 flex items-center justify-between text-primary"
+                >
+                  <h5>Emily S.</h5>
+                  <div class="flex gap-2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
               </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="./assets/discover-slide/slide1.jpeg"
-                  alt=""
-                  class="rounded-md"
-                />
+              <!-- Individual Slide -->
+              <div class="swiper-slide bg-white p-4 text-black">
+                <!-- Testimonial Content -->
+                <p class="text-center text-lg capitalize lg:p-4">
+                  As a self-proclaimed coffee connoisseur, I can confidently say
+                  that Beanery serves some of the best brews in town. Their
+                  baristas are true artists, meticulously crafting each drink to
+                  perfection. From their rich, full-bodied espresso to their
+                  delightfully creamy lattes, every sip is a delight for the
+                  senses. Paired with their delectable baked goods.
+                </p>
+                <!-- Testimonial Author and Rating -->
+                <div
+                  class="my-6 flex items-center justify-between text-primary"
+                >
+                  <h5>Sarah K.</h5>
+                  <div class="flex gap-2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
               </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="./assets/discover-slide/slide1.jpeg"
-                  alt=""
-                  class="rounded-md"
-                />
+              <!-- Individual Slide -->
+              <div class="swiper-slide bg-white p-4 text-black">
+                <!-- Testimonial Content -->
+                <p class="text-center text-lg capitalize lg:p-4">
+                  Beanery is more than just a coffee shop; it's a community hub
+                  where everyone feels welcome. The cozy ambiance and inviting
+                  decor make it the perfect place to unwind after a long day or
+                  catch up with friends over a cup of their signature brew. The
+                  friendly staff always remembers my order and greets me with a
+                  warm smile.
+                </p>
+                <!-- Testimonial Author and Rating -->
+                <div
+                  class="my-6 flex items-center justify-between text-primary"
+                >
+                  <h5>Sarah K.</h5>
+                  <div class="flex gap-2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
               </div>
-
-              <div class="swiper-slide">
-                <img
-                  src="./assets/discover-slide/slide1.jpeg"
-                  alt=""
-                  class="rounded-md"
-                />
+              <!-- Individual Slide -->
+              <div class="swiper-slide bg-white p-4 text-black">
+                <!-- Testimonial Content -->
+                <p class="text-center text-lg capitalize lg:p-4">
+                  "Beanery is a true gem in our neighborhood. Their coffee is
+                  always freshly brewed and bursting with flavor. But what
+                  really keeps me coming back is the warm, friendly atmosphere
+                  and the genuine care the staff shows to every customer. It's
+                  become my go-to spot for catching up with friends or getting
+                  some work done in a cozy setting."
+                </p>
+                <!-- Testimonial Author and Rating -->
+                <div
+                  class="my-6 flex items-center justify-between text-primary"
+                >
+                  <h5>Emily S.</h5>
+                  <div class="flex gap-2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Individual Slide -->
+              <div class="swiper-slide bg-white p-4 text-black">
+                <!-- Testimonial Content -->
+                <p class="text-center text-lg capitalize lg:p-4">
+                  As a self-proclaimed coffee connoisseur, I can confidently say
+                  that Beanery serves some of the best brews in town. Their
+                  baristas are true artists, meticulously crafting each drink to
+                  perfection. From their rich, full-bodied espresso to their
+                  delightfully creamy lattes, every sip is a delight for the
+                  senses. Paired with their delectable baked goods.
+                </p>
+                <!-- Testimonial Author and Rating -->
+                <div
+                  class="my-6 flex items-center justify-between text-primary"
+                >
+                  <h5>Sarah K.</h5>
+                  <div class="flex gap-2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Individual Slide -->
+              <div class="swiper-slide bg-white p-4 text-black">
+                <!-- Testimonial Content -->
+                <p class="text-center text-lg capitalize lg:p-4">
+                  Beanery is more than just a coffee shop; it's a community hub
+                  where everyone feels welcome. The cozy ambiance and inviting
+                  decor make it the perfect place to unwind after a long day or
+                  catch up with friends over a cup of their signature brew. The
+                  friendly staff always remembers my order and greets me with a
+                  warm smile.
+                </p>
+                <!-- Testimonial Author and Rating -->
+                <div
+                  class="my-6 flex items-center justify-between text-primary"
+                >
+                  <h5>Sarah K.</h5>
+                  <div class="flex gap-2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Discover Beanery -->
+
+      <section class="container py-8 lg:py-36" id="discover">
+        <div class="flex flex-col items-end gap-4 lg:flex-row lg:gap-0">
+          <div
+            class="relative z-10 w-full rounded-md bg-primary p-9 text-white lg:w-2/3"
+          >
+            <img
+              src="./assets/discover.png"
+              alt="discover"
+              class="absolute -bottom-9 right-9 opacity-10"
+            />
+            <div class="w-5/6">
+              <!-- Section Heading -->
+              <h2
+                class="font-bold"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Discover the Beanery Experience
+              </h2>
+              <!-- Section Text -->
+
+              <p
+                class="mb-7 mt-4 w-11/12"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Beanery offers unparalleled coffee indulgence. Master baristas
+                craft artisanal cups using premium beans. Savor bold espressos,
+                delicate pour-overs, and innovative creations in our inviting
+                ambiance.
+              </p>
+
+              <!-- Section Button -->
+              <div data-aos="fade-right" data-aos-duration="1000">
+                <button class="white">Explore Full Menu</button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative h-72 w-full overflow-x-hidden overflow-y-visible lg:-left-4 lg:w-1/3"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="swiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/discover-slide/slide1.jpeg"
+                    alt=""
+                    class="rounded-md"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/discover-slide/slide1.jpeg"
+                    alt=""
+                    class="rounded-md"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/discover-slide/slide1.jpeg"
+                    alt=""
+                    class="rounded-md"
+                  />
+                </div>
+
+                <div class="swiper-slide">
+                  <img
+                    src="./assets/discover-slide/slide1.jpeg"
+                    alt=""
+                    class="rounded-md"
+                  />
+                </div>
+              </div>
+            </div>
             <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer
-      class="relative bg-cover bg-[center_bottom] bg-no-repeat"
-      style="background-image: url(./assets/footer-bg.jpeg)"
-    >
-      <div class="bg-primary bg-opacity-90 py-16 text-white lg:py-32">
-        <div
-          class="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4"
-        >
-          <aside>
-            <img src="./assets/footer-logo.png" alt="footer-logo" />
-            <p>
-              Indulge in our expertly crafted coffee and immerse yourself in the
-              cozy ambiance of Beanery. Discover the perfect blend of flavor and
-              atmosphere.
-            </p>
-          </aside>
+      <footer
+        class="relative bg-cover bg-[center_bottom] bg-no-repeat"
+        style="background-image: url(./assets/footer-bg.jpeg)"
+      >
+        <div class="bg-primary bg-opacity-90 py-16 text-white lg:py-32">
+          <!-- The main content of the footer has a primary background color with 90% opacity, white text, and padding for spacing. -->
 
-          <aside>
-            <h3 class="mb-2 text-primary-light lg:mb-10">Contact</h3>
+          <div
+            class="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4"
+          >
+            <!-- A responsive grid layout is used to organize the footer content into 1, 2, or 4 columns depending on the screen size. -->
 
-            <ul class="flex flex-col gap-4">
-              <li>818 22nd Ave NW Saint Paul, MN 55112-6629 USA</li>
-              <li>Support@raddito.com</li>
-              <li>833-900-8338</li>
-            </ul>
-          </aside>
+            <aside>
+              <img src="./assets/footer-logo.png" alt="footer-logo" />
+              <!-- Footer logo image -->
 
-          <aside>
-            <h3 class="mb-2 text-primary-light lg:mb-10">Opening Hour</h3>
+              <p>
+                Indulge in our expertly crafted coffee and immerse yourself in
+                the cozy ambiance of Beanery. Discover the perfect blend of
+                flavor and atmosphere.
+                <!-- A brief description or tagline about the brand or business. -->
+              </p>
+            </aside>
 
-            <p>Monday - Friday: ........6am - 9pm</p>
-            <p>Saturday: ........6am - 10pm</p>
-            <p>Sunday: ........Closed</p>
-            <p>*Close on special days</p>
-          </aside>
+            <aside>
+              <h3 class="mb-2 text-primary-light lg:mb-10">Contact</h3>
+              <!-- Contact information section title -->
 
-          <aside>
-            <h3 class="mb-2 text-primary-light lg:mb-10">Despina Video</h3>
+              <ul class="flex flex-col gap-4">
+                <!-- List of contact information -->
+                <li>Saint Paul, MN 55112-6629 USA</li>
+                <li>
+                  <a href="mailto:support@raddito.com">Support@raddito.com</a>
+                </li>
+                <li>123-456-7890</li>
+              </ul>
+            </aside>
 
-            <div class="flex gap-4">
+            <aside>
+              <h3 class="mb-2 text-primary-light lg:mb-10">Opening Hour</h3>
+              <!-- Opening hours section title -->
+
+              <p>Monday - Friday: ........6am - 9pm</p>
+              <p>Saturday: ........6am - 10pm</p>
+              <p>Sunday: ........Closed</p>
+              <p>*Close on special days</p>
+              <!-- List of business opening hours with a note on special days -->
+            </aside>
+
+            <aside>
+              <h3 class="mb-2 text-primary-light lg:mb-10">Despina Video</h3>
+              <!-- Social media section title -->
+
+              <div class="flex gap-4">
+                <!-- A row of social media icons with hover effects -->
+                <a
+                  href="https://www.facebook.com/RadditoLLC"
+                  target="_blank"
+                  class="text-primary-light transition duration-500 hover:text-white"
+                >
+                  <i class="fa fa-facebook-f text-2xl"></i>
+                </a>
+                <a
+                  href="https://twitter.com/RadditoLLC"
+                  target="_blank"
+                  class="text-primary-light transition duration-500 hover:text-white"
+                >
+                  <i class="fa fa-twitter text-2xl"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/radditollc"
+                  target="_blank"
+                  class="text-primary-light transition duration-500 hover:text-white"
+                >
+                  <i class="fa fa-instagram text-2xl"></i>
+                </a>
+                <a
+                  href="https://www.pinterest.com/radditollc/"
+                  target="_blank"
+                  class="text-primary-light transition duration-500 hover:text-white"
+                >
+                  <i class="fa fa-pinterest text-2xl"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/radditollc/"
+                  target="_blank"
+                  class="text-primary-light transition duration-500 hover:text-white"
+                >
+                  <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+              </div>
+            </aside>
+          </div>
+
+          <div
+            class="absolute bottom-0 w-full bg-black bg-opacity-25 py-3 text-primary-light lg:py-7"
+          >
+            <!-- Footer copyright and credit section -->
+            <div class="container text-center">
+              Copyright © 2024 Developed by
               <a
-                href="https://www.facebook.com/RadditoLLC"
+                href="https://raddito.com/"
+                class="underline hover:no-underline"
                 target="_blank"
-                class="text-primary-light transition duration-500 hover:text-white"
-              >
-                <i class="fa fa-facebook-f text-2xl"></i>
-              </a>
-              <a
-                href="https://twitter.com/RadditoLLC"
-                target="_blank"
-                class="text-primary-light transition duration-500 hover:text-white"
-              >
-                <i class="fa fa-twitter text-2xl"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/radditollc"
-                target="_blank"
-                class="text-primary-light transition duration-500 hover:text-white"
-              >
-                <i class="fa fa-instagram text-2xl"></i>
-              </a>
-              <a
-                href="https://www.pinterest.com/radditollc/"
-                target="_blank"
-                class="text-primary-light transition duration-500 hover:text-white"
-              >
-                <i class="fa fa-pinterest text-2xl"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/radditollc/"
-                target="_blank"
-                class="text-primary-light transition duration-500 hover:text-white"
-              >
-                <i class="fab fa-linkedin-in text-2xl"></i>
-              </a>
+                >Raddito LLC</a
+              >.
             </div>
-          </aside>
-        </div>
-
-        <div
-          class="absolute bottom-0 w-full bg-black bg-opacity-25 py-3 text-primary-light lg:py-7"
-        >
-          <div class="container text-center">
-            Copyright © 2024 Developed by
-            <a
-              href="https://raddito.com/"
-              class="underline hover:no-underline"
-              target="_blank"
-              >Raddito LLC</a
-            >.
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/b50fc748ca.js"

@@ -104,6 +104,13 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+if (window.scrollY) {
+  document.getElementById("navbar-container").style.boxShadow =
+    "0 0 20px 0 #2B245D21";
+
+  document.getElementById("navbar-container").style.backgroundColor = "#ffffff";
+}
+
 function createScrollDirectionTracker() {
   let scrollDirection = "up";
   let lastScrollY = 0;
