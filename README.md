@@ -1,6 +1,6 @@
 # Beanery
 
-## Beanery HTML Template with Vite and Tailwind CSS
+## Beanery - Premium Coffee Shop HTML Template with Vite and Tailwind CSS
 
 Beanery is a stylish coffee shop HTML template built with Vite and Tailwind CSS, offering a responsive design and a cozy, inviting atmosphere. It features a diverse menu, customer testimonials, and a contact form. The template is optimized for performance and easy to customize.
 
